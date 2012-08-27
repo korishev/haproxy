@@ -26,6 +26,7 @@ template "/etc/default/haproxy" do
   owner "root"
   group "root"
   mode 0644
+  notifies :restart, "service[haproxy]"
 end
 
 service "haproxy" do
@@ -38,5 +39,5 @@ template "/etc/haproxy/haproxy.cfg" do
   owner "root"
   group "root"
   mode 0644
-  notifies :restart, "service[haproxy]"
+  notifies :reload, "service[haproxy]"
 end

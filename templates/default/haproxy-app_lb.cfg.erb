@@ -1,10 +1,7 @@
 global
         log 127.0.0.1   local0
         log 127.0.0.1   local1 notice
-        #log loghost    local0 info
         maxconn 4096
-        #debug
-        #quiet
         user haproxy
         group haproxy
 
@@ -23,7 +20,7 @@ defaults
         option httpclose
         option forwardfor
         <% end -%>
-        
+
 # Set up application listeners here.
 listen application 0.0.0.0:<%= node["haproxy"]["incoming_port"] %>
   balance <%= node["haproxy"]["balance_algorithm"] %>

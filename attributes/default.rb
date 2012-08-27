@@ -2,6 +2,7 @@
 # Cookbook Name:: haproxy
 # Default:: default
 #
+# Copyright 2012, Morgan Nelson
 # Copyright 2010, Opscode, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -27,3 +28,5 @@ default['haproxy']['x_forwarded_for'] = false
 default['haproxy']['enable_ssl'] = false
 default['haproxy']['ssl_incoming_port'] = "443"
 default['haproxy']['ssl_member_port'] = "8443"
+default['haproxy']['app_lb_template_source'] = "haproxy-app_lb.cfg.erb"
+default['haproxy']['app_lb_template_cookbook'] = nil

@@ -54,8 +54,10 @@ The search uses the node's `chef_environment`. For example, create `environments
 License and Author
 ==================
 
+Author:: Morgan Nelson
 Author:: Joshua Timberman (<joshua@opscode.com>)
 
+Copyright:: 2012, Morgan Nelson
 Copyright:: 2009-2011, Opscode, Inc
 
 Licensed under the Apache License, Version 2.0 (the "License");
